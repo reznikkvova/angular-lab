@@ -1,0 +1,18 @@
+<mat-toolbar class="navbar">
+  <a routerLink="/">
+    <span>Main Page ( redirect to news )</span>
+  </a>
+  <div>
+    <a routerLink="/news">
+      <span>News</span>
+    </a>
+    <a routerLink="/login">
+      <span>Login</span>
+    </a><a routerLink="/profile">
+    <span>Profile</span>
+  </a>
+  </div>
+</mat-toolbar>
+<div class="body">
+  <router-outlet></router-outlet>
+</div>

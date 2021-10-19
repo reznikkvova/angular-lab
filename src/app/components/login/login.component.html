@@ -1,0 +1,20 @@
+<form [formGroup]="form" *ngIf="form" (ngSubmit)="onSubmit()">
+    <div class="form-control">
+        <mat-form-field appearance="fill">
+            <mat-label>Enter your login</mat-label>
+            <input matInput placeholder="login" formControlName="login" required>
+            <mat-error *ngIf="form.get('login')!.getError('required')">Login is required</mat-error>
+        </mat-form-field>
+    </div>
+
+    <div class="form-control">
+        <mat-form-field appearance="fill">
+            <mat-label>Enter your password</mat-label>
+            <input matInput type="password" formControlName="password" required>
+            <mat-error *ngIf="form.get('password')!.getError('required')">Password is required</mat-error>
+        </mat-form-field>
+    </div>
+
+    <button mat-raised-button type="submit" color="primary">Proceed</button>
+    <mat-error *ngIf="error">{{error}}</mat-error>
+</form>
